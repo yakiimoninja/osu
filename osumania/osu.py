@@ -7,15 +7,15 @@ from windowcap import WindowCapture
 # OSU WINDOW SHOULD BE SET TO 1400 * 900 WINDOWED AND TOP LEFT CORNER FOR THIS TO WORK
 wincap = WindowCapture()
 
-#pos X 35, 85 140 200 250, 315, 365
+# pos X 35, 85 140 200 250, 315, 365
 
 time.sleep(3)
 
 #loop_time = time.time()
 while True:
     screenshot = wincap.window_cap_func()
-    screenshot
-    #cv.drawMarker(screenshot, (200, 9), color = (255, 0, 255), markerType = cv.MARKER_CROSS, markerSize = 1, thickness = 1)
+
+    #cv.drawMarker(screenshot, (200, 30), color = (255, 0, 255), markerType = cv.MARKER_CROSS, markerSize = 1, thickness = 1)
     cv.imshow('Computer Vision', screenshot)
 
     keyactions.action(screenshot, 35, 4, 's')
@@ -33,6 +33,4 @@ while True:
         cv.destroyAllWindows()
         break
 
-
-#first 0 - 50
 print('Done')

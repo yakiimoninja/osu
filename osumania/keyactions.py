@@ -11,6 +11,7 @@ import win32con
 #Key 'l' keycode is 76
 #Key ';' keycode is 59
 
+# By default all presses are actually holds
 def key_press(key):
 
     if key == 'a':
@@ -69,27 +70,42 @@ def key_release(key):
     elif key == ';':
         win32api.keybd_event(59, 0, win32con.KEYEVENTF_KEYUP, 0)
 
+
+# OSU MANIA GAME LOGIC
+# This function takes arguments
+# Frame: as in every picture of the OPENCV stream
+# Pixel pos X: to apply to the logic below
+# Key: The key that will be pressed if all conditions are met
 def action(frame, pixel_pos_x, difficulty, key,):
     
-    pixel_pos_y = 35 #BEST SO FAR 35
-    #bar_color = [177, 91, 110]
-    
-    frame_color = frame[pixel_pos_y, pixel_pos_x]
+    # Upmost pixel of purple game bar B color = 155 at Y: 30
+    frame_color = frame[30, pixel_pos_x]
+
+    # Upmost pixel of long notes Y: 9
     frame_color_up = frame[9, pixel_pos_x]
     #print(frame_color)
 
 
-    #Checks if the B value of the pixel isnt the same color as the game hint bar
-    if frame_color[1] != 91:
+    # Checks if the B value of the pixel is the same color as the upmost pixel color of the purple game bar
+    # If it isnt the same color that means that there is a note present
+    if frame_color[1] != 155:
 
-        #Button press
+        # This is for single notes
+        # If the pixel isnt the same B color as the top pixel of the PURPLE game bar
+        # Then it presses the corresponding button 
         key_press(key)
         
+        # This is for long notes
+        # If after press * (there is a tail, keep holding the button)
+        # * the pixel at Y: 9 isnt the same B color as the background
+        # Then keep holding the button  
         if frame_color_up[1] != 0:
             key_press(key)
-        #if frame_color_up[1] == 0:
-        #    key_release(key)
 
-        #print('Pressed ' + key)
-    elif (frame_color[1] == 91 and frame_color_up[1] == 0):
+    # frame_color[1] == 155 -> Checks if the B color of pixel is the same as the upmost pixel of the game bar
+    # If its true that means that there isnt a single note present
+    # frame_color_up[1] == 0 -> Checks if the B color of the pixel is the same color as the background
+    # If its true that means that there isnt a long note present either
+    # If both are true then we release the button press
+    elif (frame_color[1] == 155 and frame_color_up[1] == 0):
         key_release(key)
