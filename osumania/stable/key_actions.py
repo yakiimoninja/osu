@@ -77,7 +77,7 @@ def key_release(key):
 # Frame: as in every picture of the OPENCV stream
 # Pixel pos X: to apply to the logic below
 # Key: The key that will be pressed if all conditions are met
-def action(frame, pixel_pos_x, difficulty, key,):
+def action(frame, pixel_pos_x, key,):
     
     # Upmost pixel of purple game bar B color = 155 at Y: 30
     # B Color of purple game bar = 91 at Y: 31
@@ -103,3 +103,36 @@ def action(frame, pixel_pos_x, difficulty, key,):
     # If both are true then we release the button press
     elif (frame_color_long[1] == 155 and frame_color_up[1] == 0):
         key_release(key)
+
+def play_mania(dif, screenshot):
+
+    if dif == '4':
+        
+        action(screenshot, 35, 'd')
+        action(screenshot, 85, 'f')
+        action(screenshot, 140, 'j')
+        action(screenshot, 200, 'k')
+        
+    if dif == '5':
+        action(screenshot, 35, 'd')
+        action(screenshot, 85, 'f')
+        action(screenshot, 140, 'space')
+        action(screenshot, 200, 'j')
+        action(screenshot, 250, 'k')
+        
+    if dif == '6':
+        action(screenshot, 35, 's')
+        action(screenshot, 85, 'd')
+        action(screenshot, 140, 'f')
+        action(screenshot, 250, 'j')
+        action(screenshot, 315, 'k')
+        action(screenshot, 365, 'l')
+
+    if dif == '7':
+        action(screenshot, 35, 's')
+        action(screenshot, 85, 'd')
+        action(screenshot, 140, 'f')
+        action(screenshot, 200, 'space')
+        action(screenshot, 250, 'j')
+        action(screenshot, 315, 'k')
+        action(screenshot, 365, 'l')
