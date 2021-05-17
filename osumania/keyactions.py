@@ -1,11 +1,12 @@
 import win32api
 import win32con
+import time as time
 
-#Key 'a' Keycode is	65
-#Key 's' keycode is 83
-#Key 'd' Keycode is	68
-#Key 'f' keycode is 70
-#Key 'Space' keycode 32
+#Key 'a' Keycode is	65                  ####    COLORS    ####
+#Key 's' keycode is 83                  # purple game bar B color = 91
+#Key 'd' Keycode is	68                  # upmost purple game bar B color = 155
+#Key 'f' keycode is 70                  # green note B color = 186
+#Key 'Space' keycode 32                 # purple note B color = 69
 #Key 'j' keycode is 74
 #Key 'k' keycode is 75
 #Key 'l' keycode is 76
@@ -79,33 +80,26 @@ def key_release(key):
 def action(frame, pixel_pos_x, difficulty, key,):
     
     # Upmost pixel of purple game bar B color = 155 at Y: 30
-    frame_color = frame[30, pixel_pos_x]
-
+    # B Color of purple game bar = 91 at Y: 31
+    frame_color_long = frame[30, pixel_pos_x]
+    frame_color_single = frame[26, pixel_pos_x]
     # Upmost pixel of long notes Y: 9
     frame_color_up = frame[9, pixel_pos_x]
-    #print(frame_color)
+    
 
-
-    # Checks if the B value of the pixel is the same color as the upmost pixel color of the purple game bar
-    # If it isnt the same color that means that there is a note present
-    if frame_color[1] != 155:
-
-        # This is for single notes
-        # If the pixel isnt the same B color as the top pixel of the PURPLE game bar
-        # Then it presses the corresponding button 
+    # Checks if the B value of the pixel is the same color as B color of the single note
+    # If it is the same color that means that there is a note present and presses the respective button
+    if frame_color_single[1] == 69:
         key_press(key)
-        
-        # This is for long notes
-        # If after press * (there is a tail, keep holding the button)
-        # * the pixel at Y: 9 isnt the same B color as the background
-        # Then keep holding the button  
-        if frame_color_up[1] != 0:
-            key_press(key)
 
-    # frame_color[1] == 155 -> Checks if the B color of pixel is the same as the upmost pixel of the game bar
+    # Checks if the B value of the pixel is the same color as B color of the long note
+    elif frame_color_long[1] == 186:
+        key_press(key)
+
+    # frame_color_long[1] == 155 -> Checks if the B color of the pixel is the same as the upmost pixel of the game bar
     # If its true that means that there isnt a single note present
     # frame_color_up[1] == 0 -> Checks if the B color of the pixel is the same color as the background
     # If its true that means that there isnt a long note present either
     # If both are true then we release the button press
-    elif (frame_color[1] == 155 and frame_color_up[1] == 0):
+    elif (frame_color_long[1] == 155 and frame_color_up[1] == 0):
         key_release(key)

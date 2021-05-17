@@ -8,18 +8,16 @@ class WindowCapture:
     h = 0
     cropped_x = 0
     cropped_y = 0
-    offset_x = 0
-    offset_y = 0
     hwnd = None
 
     #Constructor
     def __init__(self):
         
-        self.w = 655
-        self.h = 800
+        self.w = 655 #1920#
+        self.h = 800 #1080#
         self.hwnd = None
 
-        #Removing unused capture space
+        # Removing unused capture space
         sidepx = 250
         toppx = 750
 
