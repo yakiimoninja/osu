@@ -106,29 +106,29 @@ def action(frame, pixel_pos_x, key,):
 
 def play_mania(dif, screenshot):
 
-    if dif == '4':
+    if dif == 4:
         
         action(screenshot, 35, 'd')
         action(screenshot, 85, 'f')
         action(screenshot, 140, 'j')
         action(screenshot, 200, 'k')
         
-    if dif == '5':
+    if dif == 5:
         action(screenshot, 35, 'd')
         action(screenshot, 85, 'f')
         action(screenshot, 140, 'space')
         action(screenshot, 200, 'j')
         action(screenshot, 250, 'k')
         
-    if dif == '6':
+    if dif == 6:
         action(screenshot, 35, 's')
         action(screenshot, 85, 'd')
         action(screenshot, 140, 'f')
-        action(screenshot, 250, 'j')
-        action(screenshot, 315, 'k')
-        action(screenshot, 365, 'l')
+        action(screenshot, 200, 'j')
+        action(screenshot, 250, 'k')
+        action(screenshot, 315, 'l')
 
-    if dif == '7':
+    if dif == 7:
         action(screenshot, 35, 's')
         action(screenshot, 85, 'd')
         action(screenshot, 140, 'f')

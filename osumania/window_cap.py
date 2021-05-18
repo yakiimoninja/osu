@@ -6,8 +6,8 @@ def window_cap_func(x, y):
 
     hwnd = win32gui.FindWindow(None, "osu!")
 
-    w = 394 #1920#
-    h = 50 #1080#
+    w = 394 
+    h = 50
 
     # Removing unused capture space
     cropped_x = x + 258
@@ -40,3 +40,18 @@ def window_cap_func(x, y):
     #img = np.ascontiguousarray(img)
 
     return img
+
+# This gets the top left coordinates of the window
+def window_tracking(coordinate):
+    
+    hwnd = win32gui.FindWindow(None, "osu!")
+    window_pos = win32gui.GetWindowPlacement(hwnd)
+    # Logic to isolate the X and Y
+    window_pos = window_pos[4]
+    window_start_x = window_pos[0]
+    window_start_y = window_pos[1]
+    
+    if coordinate == 'x':
+        return window_start_x
+    if coordinate == 'y':
+        return window_start_y
