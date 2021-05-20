@@ -8,7 +8,7 @@ import time as time
 #Key 'f' keycode is 70                  # small blue note G color = 142
 #Key 'Space' keycode 32                 # big red note G color = 62
 #Key 'j' keycode is 74                  # big blue note G color = 128                 
-#Key 'k' keycode is 75
+#Key 'k' keycode is 75                  # 55, 110 pos for yellow bar?
 #Key 'l' keycode is 76
 #Key ';' keycode is 59
 
@@ -45,9 +45,8 @@ def key_release(key):
 def play_taiko(screenshot):
     
     # Pixel pos for small notes
-    pixel_color_small = screenshot[20,62]
-    pixel_color_small_forward = screenshot[27, 62]
-    pixel_color_big = screenshot[1, 62]
+    pixel_color_small = screenshot[106, 59] # KEEP IN MIND THESE ARE Y AND X
+    pixel_color_big = screenshot[62, 0]
 
     key_release('d')
     key_release('f')
@@ -57,11 +56,13 @@ def play_taiko(screenshot):
         key_press('f')
         #print("pressed small red")
     elif(pixel_color_small[1] == 142  or pixel_color_small[1] == 103 or pixel_color_small[1] == 192 
-    or pixel_color_small[1] == 99 or pixel_color_small[1] == 143 or pixel_color_small[1] == 140):
+    or pixel_color_small[1] == 99 or pixel_color_small[1] == 96 or pixel_color_small[1] == 143
+    or pixel_color_small[1] == 140 or pixel_color_small[1] == 145 or pixel_color_small[1] == 127 or pixel_color_small[1] == 130):
         key_press('d')
         #print("pressed small blue")
 
-    elif(pixel_color_big[1] == 62):
+    elif(pixel_color_big[1] == 62 or pixel_color_big[1] == 69 or pixel_color_big[1] == 63 
+    or pixel_color_big[1] == 64 or pixel_color_big[1] == 65 or pixel_color_big[1] == 66):
         key_press('f')
         key_press('j')
         #print("pressed big red")

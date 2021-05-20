@@ -1,6 +1,5 @@
 import cv2 as cv
 import time
-#import difficulty
 import key_actions
 import window_cap
 import win32gui, win32api, win32con
@@ -13,6 +12,7 @@ time.sleep(2)
 # For window tracking
 window_start_x = window_cap.window_tracking('x')
 window_start_y = window_cap.window_tracking('y')
+#print(window_start_x, window_start_y)
 
 # Presses Enter key
 #win32api.keybd_event(13, 0, 0, 0)
@@ -23,9 +23,9 @@ time.sleep(.1)
 
 while True:
     screenshot = window_cap.window_cap_func(window_start_x, window_start_y)
-    color = screenshot[20, 62]
+    color = screenshot[106, 59]
     print(color[1])
-    #cv.drawMarker(screenshot, (15, 62), color = (255, 0, 255), markerType = cv.MARKER_CROSS, markerSize = 5, thickness = 1)
+    #cv.drawMarker(screenshot, (55, 108), color = (255, 0, 255), markerType = cv.MARKER_CROSS, markerSize = 5, thickness = 1)
     cv.imshow('Press Q to close', screenshot)
 
     key_actions.play_taiko(screenshot)
