@@ -45,7 +45,7 @@ def key_release(key):
 def play_taiko(screenshot):
     
     # Pixel pos for small notes
-    pixel_color_small = screenshot[106, 63] # KEEP IN MIND THESE ARE Y AND X
+    pixel_color_small = screenshot[106, 60] # KEEP IN MIND THESE ARE Y AND X
     pixel_color_big = screenshot[62, 1]
 
     key_release('d')
@@ -53,26 +53,30 @@ def play_taiko(screenshot):
     key_release('j')
     key_release('k')
 
-    if (pixel_color_small[2] >= 220):
+    if (pixel_color_small[2] == 235 or pixel_color_small[2] == 234 or pixel_color_small[2] == 233 
+    or pixel_color_small[2] == 232 or pixel_color_small[2] == 231 or pixel_color_small[2] == 230
+    or pixel_color_small[2] == 236 or pixel_color_small[2] == 237 or pixel_color_small[2] == 238
+    or pixel_color_small[2] == 239 or pixel_color_small[2] == 240):
         key_press('f')
         #print("pressed small red")
-    if(pixel_color_small[0] >= 150):
+    if(pixel_color_small[0] == 172 or pixel_color_small[0] == 173 or pixel_color_small[0] == 174
+    or pixel_color_small[0] == 175 or pixel_color_small[0] == 176 or pixel_color_small[0] == 177
+    or pixel_color_small[0] == 171 or pixel_color_small[0] == 170 or pixel_color_small[0] == 169
+    or pixel_color_small[0] == 168 or pixel_color_small[0] == 167 or pixel_color_small[0] == 231):
         key_press('d')
         #print("pressed small blue")
 
-    if(pixel_color_big[1] == 62 or pixel_color_big[1] == 69 or pixel_color_big[1] == 63 
-    or pixel_color_big[1] == 64 or pixel_color_big[1] == 65 or pixel_color_big[1] == 66):
+    if(pixel_color_big[2] == 212 ):
         key_press('f')
         key_press('j')
         #print("pressed big red")
-    if(pixel_color_big[1] == 128):
+    if(pixel_color_big[0] == 155):
         key_press('d')
         key_press('k')
         #print("pressed big blue")
     #else:
-        #None
-        #key_release('d')
-        #key_release('f')
-        #key_release('j')
-        #key_release('k')
+    #    key_release('d')
+    #    key_release('f')
+    #    key_release('j')
+    #    key_release('k')
         #print("released all")
