@@ -23,9 +23,9 @@ time.sleep(.1)
 
 while True:
     screenshot = window_cap.window_cap_func(window_start_x, window_start_y)
-    color = screenshot[106, 63]
+    color = screenshot[106, 55]
     print("B: {}, G: {}, R: {}".format(color[0], color[1], color[2]))
-    #cv.drawMarker(screenshot, (63, 107), color = (255, 0, 255), markerType = cv.MARKER_CROSS, markerSize = 5, thickness = 1)
+    #cv.drawMarker(screenshot, (47, 105), color = (255, 0, 255), markerType = cv.MARKER_CROSS, markerSize = 5, thickness = 1)
     cv.imshow('Press Q to close', screenshot)
 
     key_actions.play_taiko(screenshot)

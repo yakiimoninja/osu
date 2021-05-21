@@ -6,8 +6,8 @@ import time as time
 #Key 's' keycode is 83                  # background circle G color = 51
 #Key 'd' Keycode is	68                  # small red note B color = 44 G color = 69 R color = 235
 #Key 'f' keycode is 70                  # small blue note B color = 172 G color = 142 R color = 67
-#Key 'Space' keycode 32                 # big red note B color = 40 G color = 62 R color = 212 
-#Key 'j' keycode is 74                  # big blue note B color = 155 G color = 128 R color = 60                 
+#Key 'Space' keycode 32                 # big red note B color = 23 G color = 35 R color = 121 
+#Key 'j' keycode is 74                  # big blue note B color = 88 G color = 73 R color = 34                 
 #Key 'k' keycode is 75                  # 55, 110 pos for yellow bar?
 #Key 'l' keycode is 76
 #Key ';' keycode is 59
@@ -46,6 +46,7 @@ def play_taiko(screenshot):
     
     # Pixel pos for small notes
     pixel_color_small = screenshot[106, 63] # KEEP IN MIND THESE ARE Y AND X
+    pixel_color_failsafe = screenshot[105, 47]
     pixel_color_big = screenshot[62, 1]
 
     key_release('d')
@@ -53,19 +54,18 @@ def play_taiko(screenshot):
     key_release('j')
     key_release('k')
 
-    if (pixel_color_small[2] >= 220):
+    if (pixel_color_small[2] > 150 or pixel_color_failsafe[2] > 150):
         key_press('f')
         #print("pressed small red")
-    if(pixel_color_small[0] >= 150):
+    if(pixel_color_small[0] >= 119 or pixel_color_failsafe[0] > 119):
         key_press('d')
         #print("pressed small blue")
 
-    if(pixel_color_big[1] == 62 or pixel_color_big[1] == 69 or pixel_color_big[1] == 63 
-    or pixel_color_big[1] == 64 or pixel_color_big[1] == 65 or pixel_color_big[1] == 66):
+    if(pixel_color_big[2] == 121):
         key_press('f')
         key_press('j')
         #print("pressed big red")
-    if(pixel_color_big[1] == 128):
+    if(pixel_color_big[0] == 88):
         key_press('d')
         key_press('k')
         #print("pressed big blue")
