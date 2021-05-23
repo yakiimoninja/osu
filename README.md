@@ -7,38 +7,38 @@
 </p>
 
 # General notes
-Game window must be set to ```1400 x 900``` and windowed for this to work.
+Game window must be set to ```1400 x 900``` and ***windowed*** for this to work.
 
-Game window must not be moved after the lauch of the bot.
+Game window ***must not be moved*** after the lauch of the bot.
 
-Skin assests provided must be used for this to work.
+Skin assests provided ***must be used*** for this to work.
 
-After running the bot you have 3 seconds to ```Alt + Tab``` to the game window.
+After running the bot you have ***3 seconds*** to ```Alt + Tab``` to the game window.
 
 The bot then will automatically press ```Enter``` to the map that is selected at the song list screen.
 
-To terminate the bot hit the ```Q``` key on the bot window that will appear.
+To terminate the bot hit the ```Q``` key on the ***bot window*** that will appear.
 
 # Mania specific notes
 **Necessary button layout**: 
 
-4K: ```D``` ```F``` ```J``` ```K```
+**4K**:  ```D``` ```F``` ```J``` ```K```
 
-5K: ```D``` ```F``` ```SPACE``` ```J``` ```K```
+**5K**:  ```D``` ```F``` ```SPACE``` ```J``` ```K```
 
-6K: ```S``` ```D``` ```F``` ```J``` ```K``` ```L```
+**6K**:  ```S``` ```D``` ```F``` ```J``` ```K``` ```L```
 
-7K: ```S``` ```D``` ```F``` ```SPACE``` ```J``` ```K``` ```L```
+**7K**:  ```S``` ```D``` ```F``` ```SPACE``` ```J``` ```K``` ```L```
 
-Unless you are going to play a beatmap with the same number of keys, you must restart the bot.
+Unless you are going to play a beatmap with the same number of keys, you ***must restart*** the bot.
 
 
 # Taiko specific notes.
-Necessary button layout:
+**Necessary button layout:**
 
-Rims: ```D``` ```L``` 
+Rims:  ```D``` ```L``` 
 
-Drums: ```F``` ```J```.
+Drums:  ```F``` ```J```.
 
 If the bot misses notes, it's recommended to disable the UI by hitting ```Shift + Tab```.
 
