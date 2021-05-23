@@ -7,12 +7,17 @@
 </p>
 
 # General notes.
-#### Game window must be set to 1400 by 900 and windowed for this to work.
-#### Game window must not be moved after the lauch of the bot.
-#### Skin assests provided must be used for this to work.
-#### After running the bot you have 3 seconds to ```Alt + Tab``` to the game window.
-#### The bot then will automatically press ```Enter``` to the map that is selected at the song list screen.
-#### To terminate the bot hit the ```Q``` key on the bot window.
+Game window must be set to 1400 by 900 and windowed for this to work.
+
+Game window must not be moved after the lauch of the bot.
+
+Skin assests provided must be used for this to work.
+
+After running the bot you have 3 seconds to ```Alt + Tab``` to the game window.
+
+The bot then will automatically press ```Enter``` to the map that is selected at the song list screen.
+
+To terminate the bot hit the ```Q``` key on the bot window.
 
 # Mania specific notes.
 Unless you are going to play a beatmap with the same number of keys, you must restart the bot.
