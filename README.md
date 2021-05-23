@@ -17,7 +17,7 @@ After running the bot you have 3 seconds to ```Alt + Tab``` to the game window.
 
 The bot then will automatically press ```Enter``` to the map that is selected at the song list screen.
 
-To terminate the bot hit the ```Q``` key on the bot window.
+To terminate the bot hit the ```Q``` key on the bot window that will appear.
 
 # Mania specific notes.
 Unless you are going to play a beatmap with the same number of keys, you must restart the bot.
