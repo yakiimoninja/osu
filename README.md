@@ -7,7 +7,7 @@
 </p>
 
 # General notes.
-Game window must be set to 1400 by 900 and windowed for this to work.
+Game window must be set to ```1400 x 900``` and windowed for this to work.
 
 Game window must not be moved after the lauch of the bot.
 
