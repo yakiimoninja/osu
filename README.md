@@ -22,13 +22,13 @@ To terminate the bot hit the ```Q``` key on the ***bot window*** that will appea
 # Mania specific notes
 **Necessary button layout**: 
 
-**4K**:  ```D``` ```F``` ```J``` ```K```
+**4K:**  ```D``` ```F``` ```J``` ```K```
 
-**5K**:  ```D``` ```F``` ```SPACE``` ```J``` ```K```
+**5K:**  ```D``` ```F``` ```SPACE``` ```J``` ```K```
 
-**6K**:  ```S``` ```D``` ```F``` ```J``` ```K``` ```L```
+**6K:**  ```S``` ```D``` ```F``` ```J``` ```K``` ```L```
 
-**7K**:  ```S``` ```D``` ```F``` ```SPACE``` ```J``` ```K``` ```L```
+**7K:**  ```S``` ```D``` ```F``` ```SPACE``` ```J``` ```K``` ```L```
 
 Unless you are going to play a beatmap with the same number of keys, you ***must restart*** the bot.
 
