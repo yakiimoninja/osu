@@ -36,9 +36,9 @@ Unless you are going to play a beatmap with the same number of keys, you ***must
 # Taiko specific notes.
 **Necessary button layout:**
 
-Rims:  ```D``` ```L``` 
+**Rims:**  ```D``` ```L``` 
 
-Drums:  ```F``` ```J```.
+**Drums:**  ```F``` ```J```.
 
 If the bot misses notes, it's recommended to disable the UI by hitting ```Shift + Tab```.
 
