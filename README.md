@@ -27,7 +27,7 @@ If the bot misses notes, it's recommended to disable the UI by hitting ```Shift 
 
 # Usage and requirements.
 
-This requires python3 and ```pip``` installing the ```opencv-python``` and ```pywin32``` packages.
+This requires ```python3``` and ```pip``` installing the ```opencv-python``` and ```pywin32``` packages.
 
 To run the bot for osu!mania:
 Move to the ```mania``` directory and run through cmd the command -> ```py mania.py```.
