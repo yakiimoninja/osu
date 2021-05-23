@@ -1,3 +1,5 @@
+ADD THE LINES BELOW TO SKIN.INI
+
 [Mania]
 Keys: 2
 ColumnLineWidth: 0,0,0
