@@ -1,4 +1,4 @@
-# Bot that plays osu!mania and osu!taiko.
+# Bot that plays osu!mania and osu!taiko
 
 
 <p float="left">
@@ -6,7 +6,7 @@
   <img src="https://user-images.githubusercontent.com/80072600/119258685-5340d100-bbba-11eb-8a2a-5a7f9c6b6a75.gif" width="600" height="200" />
 </p>
 
-# General notes.
+# General notes
 Game window must be set to ```1400 x 900``` and windowed for this to work.
 
 Game window must not be moved after the lauch of the bot.
@@ -19,13 +19,13 @@ The bot then will automatically press ```Enter``` to the map that is selected at
 
 To terminate the bot hit the ```Q``` key on the bot window that will appear.
 
-# Mania specific notes.
+# Mania specific notes
 Unless you are going to play a beatmap with the same number of keys, you must restart the bot.
 
 # Taiko specific notes.
 If the bot misses notes, it's recommended to disable the UI by hitting ```Shift + Tab```.
 
-# Usage and requirements.
+# Usage and requirements
 
 This requires ```python3``` and ```pip``` installing the ```opencv-python``` and ```pywin32``` packages.
 
