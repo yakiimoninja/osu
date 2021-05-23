@@ -1,4 +1,4 @@
-# A bot that plays osu!mania and osu!taiko.
+# Bot that plays osu!mania and osu!taiko.
 
 
 <p float="left">
@@ -16,7 +16,7 @@
 Unless you are going to play a beatmap with the same number of keys, you must restart the bot.
 
 # Taiko specific notes.
-If the bot misses notes you should disable the UI by hitting ```Shift + Tab```.
+If the bot misses notes, it's recommended to disable the UI by hitting ```Shift + Tab```.
 
 # Usage and requirements.
 
