@@ -6,7 +6,7 @@ def window_cap_func(x, y):
 
     hwnd = win32gui.FindWindow(None, "osu!")
 
-    w = 251
+    w = 125
     h = 125
 
     # Removing unused capture space

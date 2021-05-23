@@ -1,5 +1,3 @@
-import cv2 as cv
-
 # This checks how many keys are present
 # Does that by checking how long the purple game bar is
 # Checks if the B color of the game bar exists

@@ -1,6 +1,4 @@
-import win32api
-import win32con
-import time as time
+import win32api, win32con
 
 #Key 'a' Keycode is	65                  ####    COLORS    ####
 #Key 's' keycode is 83                  # background circle G color = 51
@@ -45,7 +43,8 @@ def key_release(key):
 def play_taiko(screenshot):
     
     # Pixel pos for small notes
-    pixel_color_small = screenshot[106, 63] # KEEP IN MIND THESE ARE Y AND X
+    # KEEP IN MIND THESE ARE Y AND X
+    pixel_color_small = screenshot[106, 63] 
     pixel_color_failsafe = screenshot[105, 47]
     pixel_color_big = screenshot[62, 1]
 
@@ -54,25 +53,27 @@ def play_taiko(screenshot):
     key_release('j')
     key_release('k')
 
+    # Checks if the R color of the lowest possible pixel changes 
+    # To something larger than the given RED threshold 
+    # If true that means a small red note is present and presses corresponding buttons
+    # The failsafe exists in case the note passes through the initial check pixel
+    # With out triggering the button press
     if (pixel_color_small[2] > 150 or pixel_color_failsafe[2] > 150):
         key_press('f')
-        #print("pressed small red")
+
+    # Same logic as small red notes but for blue notes
+    # Checks for B color instead of R color
     if(pixel_color_small[0] >= 119 or pixel_color_failsafe[0] > 119):
         key_press('d')
-        #print("pressed small blue")
 
+    # Checks if the leftmost possible pixel changes to the given R value
+    # If true that means a big red note is present and presses the corresponding buttons
     if(pixel_color_big[2] == 121):
         key_press('f')
         key_press('j')
-        #print("pressed big red")
+
+    # Same logic as big red notes but for big blue notes
+    # Checks for B color instead of R color
     if(pixel_color_big[0] == 88):
         key_press('d')
         key_press('k')
-        #print("pressed big blue")
-    #else:
-        #None
-        #key_release('d')
-        #key_release('f')
-        #key_release('j')
-        #key_release('k')
-        #print("released all")
