@@ -1,4 +1,4 @@
-# Bot that plays osu!mania and osu!taiko
+# [OBSOLETE] Bot that plays osu!mania and osu!taiko
 
 
 <p float="left">
