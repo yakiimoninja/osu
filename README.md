@@ -1,5 +1,6 @@
 # [OBSOLETE] Bot that plays osu!mania and osu!taiko
 
+## [Disclaimer] This was made for educational purposes only. Don't use this. You __**will**__ be banned.
 
 <p float="left">
   <img src="https://user-images.githubusercontent.com/80072600/119259630-a0bf3d00-bbbe-11eb-96c5-c0ce6019c89f.gif" width="400" height="620" />
