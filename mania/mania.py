@@ -45,7 +45,7 @@ while True:
     key_actions.play_mania(dif, screenshot)
 
     #print('FPS: {}'.format( 1 / (time.time() - loop_time)))
-    #loop_time = time.time()
+    loop_time = time.time()
 
     if cv.waitKey(1) == ord('q'):
         cv.destroyAllWindows()
